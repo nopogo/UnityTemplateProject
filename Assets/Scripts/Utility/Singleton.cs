@@ -2,10 +2,10 @@
 
 public class Singleton<Instance> : MonoBehaviour where Instance : Singleton<Instance> {
     public static Instance instance;
-    public bool isPersistant;
+    public bool isPersistent;
 
     public virtual void Awake() {
-        if(isPersistant) {
+        if(isPersistent) {
             if(!instance) {
                 instance = this as Instance;
             }  else {
